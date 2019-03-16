@@ -1,0 +1,76 @@
+  317  sox -d -r8000 -c1 -b16 -e signed-integer recordme.wav
+  318  sox recordme.wav -d
+  320  sox recordme.wav recordme.raw
+  333  sox -d -r8000 -c1 -b16 -e signed-integer trumpetC.wav
+  334  sox -d -r8000 -c1 -b16 -e signed-integer trumpetD.wav
+  335  sox -d -r8000 -c1 -b16 -e signed-integer trumpetD.wav
+  336  sox -d -r8000 -c1 -b16 -e signed-integer trumpetG.wav
+  337  sox recordme.wav trumpetG.raw
+  338  sox recordme.wav trumpetD.raw
+  339  sox recordme.wav trumpetC.raw
+  340  sox trumpetG.wav trumpetG.raw
+  341  sox trumpetD.wav trumpetD.raw
+  342  sox trumpetC.wav trumpetC.raw
+  420  sox trumpetC.wav -d
+  421  sox trumpetC.wav -d
+  422  sox trumpetC.wav -d
+  423  sox trumpetC.wav trumpetCnew.wav 120 40
+  424  sox trumpetC.wav trumpetCnew.wav trim 120 40
+  425  sox trumpetC.wav -d
+  426  sox trumpetC.wav trumpetCnew.wav trim 2 2
+  427  sox trumpetCnew.wav -d
+  428  sox trumpetCnew.wav trumpetCnew.raw
+  463  sox info trumpetC.wav
+  464  sox -info trumpetC.wav
+  465  sox --info trumpetC.wav
+  467  sox --info trumpetC.wav
+  474  sox trumpetC.wav trumpetC.raw
+  488  sox --info trumpetC.wav
+  489  sox -d dim.wav
+  490  sox -d dim.wav
+  491  sox -d bright.wav
+  492  sox -d bright.wav
+  493  sox -d left.wav
+  494  sox -d right.wav
+  495  sox -d on.wav
+  496  sox -d off.wav
+  497  sox -d up.wav
+  498  sox -d down.wav
+  499  sox -d fast.wav
+  500  sox -d slow.wav
+  509  sox --info trumpetC.wav
+  616  sox --i bright.wav
+  618  sox z.wav -r 8000 y.wav
+  619  sox --i y.wav 
+  620  sox y.wav -c 1 x.wav avg -l
+  621  sox y.wav -c 1 x.wav avg 
+  622  sox x.wav -c 1 y.wav avg 
+  625  sox y.wav -c 1 x.wav
+  626  sox --i x.wav
+  627  sox x.wav x.raw
+  629  sox --i x.wav
+  630  sox x.wav -w u.wav
+  631  sox x.wav -b2 u.wav
+  632  sox x.wav -b16 u.wav
+  633  sox --i u.wav
+  634  sox u.wav -d
+  635  sox u.wav u.raw
+  638  history | grep sox
+  639  sox dim.wav -r8000 -c1 -b16 z.wav
+  640  sox --i z.wav
+  641  sox -d -r16000 -c1 -b16 -e signed-integer file.wav
+  642  sox file.wav -d
+  643  sox --i file.wav
+  644  sox file.wav file.raw
+  646  sox -d -r16000 -c1 -b16 -e signed-integer file1.wav
+  647  sox --i file1.wav
+  671  sox --i file1.wav
+  672  sox file1.wav -d
+  681  sox file1.wav file1.raw
+  689  sox file1.wav -d
+  690  sox file1.wav -d
+  691  sox -d -r16000 -c1 -b16 -e signed-integer file2.wav
+  692  sox file2.wav file2.raw
+  694  sox file2.wav -d
+  695  sox --i file2.wav
+  696  history | grep sox &> sox_commands.txt
